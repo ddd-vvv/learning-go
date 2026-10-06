@@ -4,4 +4,6 @@ go 1.27.1
 
 replace example.com/greetings => ../greetings
 
-require example.com/greetings v0.0.0-00010101000000-000000000000
+replace example.com/wakeup => ../wakeup
+
+require example.com/wakeup v0.0.0-00010101000000-000000000000
