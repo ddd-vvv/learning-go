@@ -2,12 +2,27 @@ package main
 
 import (
 	"fmt"
+	"log"
 
 	"example.com/wakeup"
 )
 
 func main() {
-	// Get a greeting message and print it.
-	message := wakeup.WakeUp("ddd")
+	// Set properties of the predefined Logger, including
+	// the log entry prefix and a flag to disable printing
+	// the time, source file, and line number.
+	log.SetPrefix("log: ")
+	log.SetFlags(0)
+
+	// Request a wakeup message.
+	message, err := wakeup.WakeUp("")
+	// If an error was returned, print it to the console and
+	// exit the program.
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	// If no error was returned, print the returned message
+	// to the console.
 	fmt.Println(message)
 }
