@@ -11,8 +11,7 @@ func WakeUp(name string) (string, error) {
 	if name == "" {
 		return "", errors.New("It's too late to wake up.")
 	}
-	// message := fmt.Sprintf(randomFormat(), name)
-	message := fmt.Sprintf(randomFormat())
+	message := fmt.Sprintf(randomFormat(), name)
 	return message, nil
 }
 
