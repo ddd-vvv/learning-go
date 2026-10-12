@@ -15,7 +15,7 @@ func main() {
 	log.SetFlags(0)
 
 	// Request a wakeup message.
-	message, err := wakeup.WakeUp("")
+	message, err := wakeup.WakeUp("Neo")
 	// If an error was returned, print it to the console and
 	// exit the program.
 	if err != nil {
