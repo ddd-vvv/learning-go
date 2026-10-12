@@ -14,10 +14,11 @@ func main() {
 	log.SetPrefix("log: ")
 	log.SetFlags(0)
 
+	// A slice of names.
+	names := []string{"Neo", "ddd", "Tito"}
+
 	// Request a wakeup message.
-	message, err := wakeup.WakeUp("Neo")
-	// If an error was returned, print it to the console and
-	// exit the program.
+	message, err := wakeup.WakeUps(names)
 	if err != nil {
 		log.Fatal(err)
 	}
